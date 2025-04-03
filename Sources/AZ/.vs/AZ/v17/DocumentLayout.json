@@ -1,0 +1,759 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\azdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\azdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\userroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\userroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C5A9182-71BD-41B6-8147-C0C16BF8DE00}|AZ.Core\\AZ.Core.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.core\\enums\\userstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C5A9182-71BD-41B6-8147-C0C16BF8DE00}|AZ.Core\\AZ.Core.csproj|solutionrelative:az.core\\enums\\userstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\trafficstatisticconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\trafficstatisticconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\trafficstatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\trafficstatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\tagconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\tagconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\articletranslation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\articletranslation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\seeddata\\appsettingseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\seeddata\\appsettingseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\appsettingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\appsettingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\appsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\appsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\categorytranslation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\categorytranslation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\roleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\roleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C5A9182-71BD-41B6-8147-C0C16BF8DE00}|AZ.Core\\AZ.Core.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.core\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C5A9182-71BD-41B6-8147-C0C16BF8DE00}|AZ.Core\\AZ.Core.csproj|solutionrelative:az.core\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\categorypermissionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\categorypermissionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\categorypermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\categorypermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\ratingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\ratingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\mediaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\mediaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\media.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\media.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\articleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\articleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\logconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\logconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\likeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\likeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C5A9182-71BD-41B6-8147-C0C16BF8DE00}|AZ.Core\\AZ.Core.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.core\\enums\\feedbackstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C5A9182-71BD-41B6-8147-C0C16BF8DE00}|AZ.Core\\AZ.Core.csproj|solutionrelative:az.core\\enums\\feedbackstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C5A9182-71BD-41B6-8147-C0C16BF8DE00}|AZ.Core\\AZ.Core.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.core\\enums\\articlestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C5A9182-71BD-41B6-8147-C0C16BF8DE00}|AZ.Core\\AZ.Core.csproj|solutionrelative:az.core\\enums\\articlestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\feedbackconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\feedbackconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\categorytranslationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\categorytranslationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\dataaccess\\configurations\\advertisementconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\dataaccess\\configurations\\advertisementconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.infrastructure\\entities\\articletag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4AF74C-2A8B-415B-AAE4-5EB9AC7BBD17}|AZ.Infrastructure\\AZ.Infrastructure.csproj|solutionrelative:az.infrastructure\\entities\\articletag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C5A9182-71BD-41B6-8147-C0C16BF8DE00}|AZ.Core\\AZ.Core.csproj|d:\\data\\projects\\azsolutions\\sources\\az\\az.core\\mapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C5A9182-71BD-41B6-8147-C0C16BF8DE00}|AZ.Core\\AZ.Core.csproj|solutionrelative:az.core\\mapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Data\\Projects\\AZSolutions\\Documents\\Solution-tree.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Data\\Projects\\AZSolutions\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 290,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppSettingSeeder.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\SeedData\\AppSettingSeeder.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\SeedData\\AppSettingSeeder.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\SeedData\\AppSettingSeeder.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\SeedData\\AppSettingSeeder.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwCYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T10:05:49.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppSettingConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\AppSettingConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\AppSettingConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\AppSettingConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\AppSettingConfiguration.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T10:02:40.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AZDbContext.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\AZDbContext.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\AZDbContext.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\AZDbContext.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\AZDbContext.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAADwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:57:00.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "README.md",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\README.md",
+              "RelativeDocumentMoniker": "..\\..\\README.md",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\README.md",
+              "RelativeToolTip": "..\\..\\README.md",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-04-03T04:00:00.006Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 118,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRoleConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\UserRoleConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\UserRoleConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\UserRoleConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\UserRoleConfiguration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowAsAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T10:27:12.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAAFcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T10:20:20.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TrafficStatisticConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\TrafficStatisticConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\TrafficStatisticConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\TrafficStatisticConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\TrafficStatisticConfiguration.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T10:14:01.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TagConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\TagConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\TagConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\TagConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\TagConfiguration.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAhwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T10:11:16.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RoleType.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Core\\Enums\\RoleType.cs",
+              "RelativeDocumentMoniker": "AZ.Core\\Enums\\RoleType.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Core\\Enums\\RoleType.cs",
+              "RelativeToolTip": "AZ.Core\\Enums\\RoleType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:51:43.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RoleConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\RoleConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\RoleConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\RoleConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\RoleConfiguration.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAB8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:46:35.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RatingConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\RatingConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\RatingConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\RatingConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\RatingConfiguration.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAtwBoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:43:33.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MediaConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\MediaConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\MediaConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\MediaConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\MediaConfiguration.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:35:03.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LogConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\LogConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\LogConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\LogConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\LogConfiguration.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAowCEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:32:36.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LikeConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\LikeConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\LikeConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\LikeConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\LikeConfiguration.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:27:54.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "FeedbackConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\FeedbackConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\FeedbackConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\FeedbackConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\FeedbackConfiguration.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAowCwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:22:51.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "FeedbackStatus.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Core\\Enums\\FeedbackStatus.cs",
+              "RelativeDocumentMoniker": "AZ.Core\\Enums\\FeedbackStatus.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Core\\Enums\\FeedbackStatus.cs",
+              "RelativeToolTip": "AZ.Core\\Enums\\FeedbackStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:17:20.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CategoryTranslationConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\CategoryTranslationConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\CategoryTranslationConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\CategoryTranslationConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\CategoryTranslationConfiguration.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAcwC4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:12:38.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CategoryPermissionConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\CategoryPermissionConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\CategoryPermissionConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\CategoryPermissionConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\CategoryPermissionConfiguration.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAwCEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:02:41.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CategoryConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\CategoryConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\CategoryConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\CategoryConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\CategoryConfiguration.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:00:33.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ArticleStatus.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Core\\Enums\\ArticleStatus.cs",
+              "RelativeDocumentMoniker": "AZ.Core\\Enums\\ArticleStatus.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Core\\Enums\\ArticleStatus.cs",
+              "RelativeToolTip": "AZ.Core\\Enums\\ArticleStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T08:06:53.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ArticleConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\ArticleConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\ArticleConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\ArticleConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\ArticleConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:48:52.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AdvertisementConfiguration.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\AdvertisementConfiguration.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\DataAccess\\Configurations\\AdvertisementConfiguration.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\DataAccess\\Configurations\\AdvertisementConfiguration.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\DataAccess\\Configurations\\AdvertisementConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwAsAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:43:18.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserStatus.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Core\\Enums\\UserStatus.cs",
+              "RelativeDocumentMoniker": "AZ.Core\\Enums\\UserStatus.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Core\\Enums\\UserStatus.cs",
+              "RelativeToolTip": "AZ.Core\\Enums\\UserStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAASwAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T06:57:53.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Rating.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Rating.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\Rating.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Rating.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\Rating.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T06:46:38.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Like.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Like.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\Like.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Like.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\Like.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T06:37:34.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\User.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\User.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\User.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:47:56.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\Role.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Role.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\Role.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAArwAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:46:54.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\UserRole.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\UserRole.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\UserRole.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\UserRole.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:46:43.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\Category.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Category.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\Category.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBEAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:46:27.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CategoryTranslation.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\CategoryTranslation.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\CategoryTranslation.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\CategoryTranslation.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\CategoryTranslation.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:45:57.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CategoryPermission.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\CategoryPermission.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\CategoryPermission.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\CategoryPermission.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\CategoryPermission.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:44:33.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ArticleTranslation.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\ArticleTranslation.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\ArticleTranslation.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\ArticleTranslation.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\ArticleTranslation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:43:59.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ArticleTag.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\ArticleTag.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\ArticleTag.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\ArticleTag.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\ArticleTag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:43:32.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Media.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Media.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\Media.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Media.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\Media.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAewA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:43:21.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Advertisement.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Advertisement.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\Advertisement.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Advertisement.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\Advertisement.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:42:59.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppSetting.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\AppSetting.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\AppSetting.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\AppSetting.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\AppSetting.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:42:48.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Log.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Log.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\Log.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Log.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\Log.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAewBEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:42:34.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TrafficStatistic.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\TrafficStatistic.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\TrafficStatistic.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\TrafficStatistic.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\TrafficStatistic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:42:23.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Feedback.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Feedback.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\Feedback.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Feedback.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\Feedback.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:42:00.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Tag.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Tag.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\Tag.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Tag.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\Tag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:38:27.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Article.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Article.cs",
+              "RelativeDocumentMoniker": "AZ.Infrastructure\\Entities\\Article.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Infrastructure\\Entities\\Article.cs",
+              "RelativeToolTip": "AZ.Infrastructure\\Entities\\Article.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAswAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:37:52.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "mapping.cs",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Core\\mapping.cs",
+              "RelativeDocumentMoniker": "AZ.Core\\mapping.cs",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Sources\\AZ\\AZ.Core\\mapping.cs",
+              "RelativeToolTip": "AZ.Core\\mapping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T04:35:33.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Solution-tree.txt",
+              "DocumentMoniker": "D:\\Data\\Projects\\AZSolutions\\Documents\\Solution-tree.txt",
+              "RelativeDocumentMoniker": "..\\..\\Documents\\Solution-tree.txt",
+              "ToolTip": "D:\\Data\\Projects\\AZSolutions\\Documents\\Solution-tree.txt",
+              "RelativeToolTip": "..\\..\\Documents\\Solution-tree.txt",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-03T04:01:58.236Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

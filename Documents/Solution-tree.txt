@@ -1,0 +1,36 @@
+﻿
+AZ Solutions
+│
+├── Core
+│   ├── Helpers          (Các helper classes, extension methods, ...)
+│   ├── Constants        (Các giá trị cố định, enum, ...)
+│   ├── AZ.Core.csproj
+│
+├── Infrastructure
+│   ├── Interfaces       (Các interface cho Services, Repositories)
+│   ├── DataAccess       (DbContext, Migrations, DbInitializer, ...)
+│   ├── Repositories     (Cài đặt các Repositories như ArticleRepository, ...)
+│   ├── Entities           (Entities như Article, Category, Advertisement,...)
+│   ├── AZ.Infrastructure.csproj
+│
+├── WebAPI
+│   ├── Controllers      (API Controllers cho các chức năng như Article, Category, ...)
+│   ├── Services         (Cài đặt các Service như ArticleService, UserService, ...)
+│	├── Models           (DTOs, ViewModels để trả về từ API, ví dụ: ArticleDto, CategoryDto)
+│   ├── AZ.WebAPI.csproj
+│
+├── WebApp
+│   ├── Models           (ViewModels cho WebApp để nhận dữ liệu từ API)
+│   ├── Controllers      (API Controllers cho các chức năng như Article, Category, ...)
+│   ├── Services         (Service để gọi API từ WebApp)
+│   ├── Views            (Views cho người dùng, sử dụng Razor Pages hoặc MVC Views)
+│   ├── AZ.WebApp.csproj
+│
+├── WebAdmin
+│   ├── Controllers      (API Controllers cho các chức năng như Article, Category, ...)
+│   ├── Models           (ViewModels cho WebAdmin để nhận dữ liệu từ API)
+│   ├── Services         (Service để gọi API từ WebAdmin)
+│   ├── Views            (Views cho quản trị viên)
+│   ├── AZ.WebAdmin.csproj
+│
+└── AZ.sln
