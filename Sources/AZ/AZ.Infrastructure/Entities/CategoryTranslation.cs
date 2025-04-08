@@ -18,8 +18,10 @@ namespace AZ.Infrastructure.Entities
         public string MetaDescription { get; set; }
         public string MetaKeywords { get; set; }
 
+
         // Relationships
         public Category Category { get; set; }
+        public Language Language { get; set; }
     }
 
 }

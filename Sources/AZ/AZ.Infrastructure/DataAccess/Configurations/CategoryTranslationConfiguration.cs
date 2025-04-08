@@ -48,6 +48,10 @@ namespace AZ.Infrastructure.DataAccess.Configurations
                 .WithMany(c => c.CategoryTranslations)
                 .HasForeignKey(ct => ct.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade); // Khi xóa Category, tất cả bản dịch liên quan bị xóa
+            builder.HasOne(l => l.Language)
+                .WithMany()
+                .HasForeignKey(l => l.LanguageCode)
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Đánh index tối ưu cho `LanguageCode` và `Slug` (Để tìm kiếm nhanh theo ngôn ngữ và slug)
             builder.HasIndex(ct => new { ct.LanguageCode, ct.Slug }).IsUnique(); // Đảm bảo không trùng slug cho mỗi ngôn ngữ

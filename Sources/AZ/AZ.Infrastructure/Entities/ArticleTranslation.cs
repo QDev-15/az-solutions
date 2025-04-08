@@ -22,6 +22,7 @@ namespace AZ.Infrastructure.Entities
         // Relationships
         public Article Article { get; set; }
         public Media OgImage { get; set; }
+        public Language Language { set; get; }
     }
 
 }

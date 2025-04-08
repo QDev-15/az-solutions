@@ -33,6 +33,7 @@ namespace AZ.Infrastructure.DataAccess
         public DbSet<TrafficStatistic> TrafficStatistics { set; get; }
         public DbSet<User> Users { set; get; }
         public DbSet<UserRole> UserRoles { set; get; }
+        public DbSet<Language> Languages { get; set; }
 
         // Hàm OnModelCreating để cấu hình mối quan hệ giữa các bảng
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -57,8 +58,10 @@ namespace AZ.Infrastructure.DataAccess
             modelBuilder.ApplyConfiguration(new TrafficStatisticConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new UserRoleConfiguration());
+            modelBuilder.ApplyConfiguration(new LanguageConfiguration());
 
             AppSettingSeeder.Seed(modelBuilder);
+            LanguageSeeder.Seed(modelBuilder);
         }
     }
 }

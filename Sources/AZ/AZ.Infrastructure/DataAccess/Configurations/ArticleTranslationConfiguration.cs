@@ -43,6 +43,11 @@ public class ArticleTranslationConfiguration : IEntityTypeConfiguration<ArticleT
             .HasForeignKey(at => at.ArticleId)
             .OnDelete(DeleteBehavior.Cascade);
 
+        builder.HasOne(l => l.Language)
+            .WithMany()
+            .HasForeignKey(l => l.LanguageCode)
+            .OnDelete(DeleteBehavior.Restrict);
+
         // Thiết lập quan hệ với Media (Ảnh Open Graph, n-1)
         builder.HasOne(at => at.OgImage)
             .WithMany()
