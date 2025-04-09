@@ -61,3 +61,5 @@ nunit-*.xml
 /Sources/AZ/.vs/AZ/FileContentIndex/cd45d1a9-8b0a-4599-a4c1-c899a957b250.vsidx
 /Sources/AZ/.vs/AZ/FileContentIndex/dc86a152-211e-4283-bddc-4da274a073cd.vsidx
 /Sources/AZ/.vs/AZ/FileContentIndex/bd752aed-a868-441e-9f8e-0cca6a17bcb6.vsidx
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
