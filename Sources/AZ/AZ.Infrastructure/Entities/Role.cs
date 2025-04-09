@@ -12,7 +12,7 @@ namespace AZ.Infrastructure.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public RoleType RoleType { get; set; } // Phân loại nhóm
+        public string RoleType { get; set; } // Phân loại nhóm
 
         // Relationship
         public ICollection<UserRole> UserRoles { get; set; }

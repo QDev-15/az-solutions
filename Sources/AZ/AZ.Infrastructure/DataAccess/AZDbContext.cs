@@ -34,12 +34,11 @@ namespace AZ.Infrastructure.DataAccess
         public DbSet<User> Users { set; get; }
         public DbSet<UserRole> UserRoles { set; get; }
         public DbSet<Language> Languages { get; set; }
+        public DbSet<UserSession> UserSessions { get; set; }
 
         // Hàm OnModelCreating để cấu hình mối quan hệ giữa các bảng
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
             // Tạo cấu hình cho các bảng và các mối quan hệ giữa chúng
             modelBuilder.ApplyConfiguration(new AdvertisementConfiguration());
             modelBuilder.ApplyConfiguration(new AppSettingConfiguration());
@@ -59,9 +58,12 @@ namespace AZ.Infrastructure.DataAccess
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new UserRoleConfiguration());
             modelBuilder.ApplyConfiguration(new LanguageConfiguration());
+            modelBuilder.ApplyConfiguration(new UserSessionConfiguration());
 
             AppSettingSeeder.Seed(modelBuilder);
             LanguageSeeder.Seed(modelBuilder);
+            UserRoleSeeder.Seed(modelBuilder);
+            //base.OnModelCreating(modelBuilder);
         }
     }
 }

@@ -15,6 +15,10 @@ namespace AZ.Infrastructure.DataAccess.Configurations
         {
             builder.HasKey(l => l.Code);
 
+            builder.Property(l => l.Code)
+                .HasMaxLength(10) // Đặt độ dài cố định
+                .IsRequired();
+
             builder.Property(l => l.DisplayName)
                 .IsRequired()
                 .HasMaxLength(100);

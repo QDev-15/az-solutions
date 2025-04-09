@@ -20,7 +20,7 @@ namespace AZ.Infrastructure.Entities
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public int? AvatarId { set; get; }
-        public UserStatus Status { set; get; }
+        public UserStatus? Status { set; get; }
 
 
         // Relationship

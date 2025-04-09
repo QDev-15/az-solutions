@@ -26,9 +26,7 @@ namespace AZ.Infrastructure.DataAccess.Configurations
                 .HasMaxLength(500);
 
             builder.Property(r => r.RoleType)
-                .IsRequired()
-                .HasDefaultValue(RoleType.User)
-                .HasConversion<string>(); // Lưu enum dưới dạng string để dễ đọc
+                .IsRequired();
            
             builder.HasIndex(r => r.Name)
                 .IsUnique(); // Đảm bảo không có hai vai trò trùng tên

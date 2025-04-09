@@ -34,12 +34,6 @@ namespace AZ.Infrastructure.DataAccess.Configurations
             builder.Property(l => l.IpAddress)
                 .HasMaxLength(50); // Giới hạn độ dài cho IP address (tùy thuộc vào format IP)
 
-            // Quan hệ với User (nếu có)
-            builder.HasOne<User>()
-                .WithMany()
-                .HasForeignKey(l => l.UserId)
-                .OnDelete(DeleteBehavior.SetNull); // Nếu User bị xóa, giữ lại log nhưng UserId sẽ là null
-
             // Đánh chỉ mục trên cột CreatedAt để tối ưu hóa việc tìm kiếm theo thời gian
             builder.HasIndex(l => l.CreatedAt);
         }

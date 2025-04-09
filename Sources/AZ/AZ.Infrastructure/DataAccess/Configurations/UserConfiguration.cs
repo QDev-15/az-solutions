@@ -48,7 +48,7 @@ namespace AZ.Infrastructure.DataAccess.Configurations
 
             // Cấu hình thuộc tính Status
             builder.Property(u => u.Status)
-                .IsRequired() // Status là bắt buộc
+                .IsRequired(false) // Status là bắt buộc
                 .HasDefaultValue(UserStatus.InActive)
                 .HasConversion<string>(); // Lưu giá trị enum dưới dạng string (hoặc bạn có thể dùng int nếu muốn)
 

@@ -38,12 +38,6 @@ namespace AZ.Infrastructure.DataAccess.Configurations
             builder.HasIndex(a => a.Key)
                 .IsUnique();  // Giả sử mỗi cấu hình có Key duy nhất
 
-            // Seed default settings
-            builder.HasData(
-                new AppSetting { Id = 1, Key = "SiteName", Value = "Real Estate News", Description = "Tên website" },
-                new AppSetting { Id = 2, Key = "DefaultLanguage", Value = "en", Description = "Ngôn ngữ mặc định" },
-                new AppSetting { Id = 3, Key = "EnableCaching", Value = "true", Description = "Kích hoạt bộ nhớ cache" }
-            );
         }
     }
 
