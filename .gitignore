@@ -54,6 +54,7 @@ TestResult.xml
 nunit-*.xml
 /.vs/AZSolutions/FileContentIndex/50fe7553-c84c-481b-89b9-ea0b60dfec40.vsidx
 /.vs/AZSolutions/v17
+/Sources/AZ/.vs/AZ
 /Sources/AZ/.vs/AZ/DesignTimeBuild/.dtbcache.v2
 /Sources/AZ/.vs/AZ/v17/DocumentLayout.backup.json
 /Sources/AZ/.vs/AZ/v17/DocumentLayout.json
