@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Helpers\" />
-    <Folder Include="Constants\" />
+    <Compile Remove="Constants\**" />
+    <Compile Remove="Helpers\**" />
+    <EmbeddedResource Remove="Constants\**" />
+    <EmbeddedResource Remove="Helpers\**" />
+    <None Remove="Constants\**" />
+    <None Remove="Helpers\**" />
   </ItemGroup>
 
 </Project>

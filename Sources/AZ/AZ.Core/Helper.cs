@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AZ.Core
 {
-    class Mapping
+    internal class Helper
     {
     }
 }
