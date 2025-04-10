@@ -1,6 +1,27 @@
+using AZ.Infrastructure.Interfaces.IRepositories;
+using AZ.Infrastructure.Interfaces.Providers;
+using AZ.Infrastructure.Providers;
+using AZ.Infrastructure.Repositories;
+using AZ.Infrastructure.Services;
+using AZ.WebApi.MiddlewareExtensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<ITimeZoneProvider, TimeZoneProvider>();
+builder.Services.AddScoped<IMappingProvider, MappingProvider>();
+
+// log services
+builder.Services.AddSingleton<ILogQueueProvider, LogQueueProvider>();
+builder.Services.AddScoped<ILogRepository, LogRepository>();
+
+// background services
+builder.Services.AddHostedService<LogBackgroundService>();
+
+
+
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -18,6 +39,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+app.UseGlobalExceptionLogger();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

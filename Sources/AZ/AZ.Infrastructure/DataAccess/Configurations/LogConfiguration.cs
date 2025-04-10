@@ -19,14 +19,6 @@ namespace AZ.Infrastructure.DataAccess.Configurations
             // Khóa chính
             builder.HasKey(l => l.Id);
 
-            // Cấu hình các cột
-            builder.Property(l => l.Action)
-                .IsRequired()
-                .HasMaxLength(255); // Giới hạn độ dài của Action
-
-            builder.Property(l => l.Description)
-                .HasMaxLength(1000); // Giới hạn độ dài của Description (có thể tùy chỉnh)
-
             builder.Property(l => l.CreatedAt)
                 .IsRequired()
                 .HasDefaultValue(DateTime.UtcNow); // Tự động tạo thời gian khi tạo log

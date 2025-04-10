@@ -7,11 +7,19 @@ using System.Threading.Tasks;
 
 namespace AZ.Core.DTOs
 {
-    public class User
+    public class UserResponse
     {
         public int Id { get; set; }
         public string Username { get; set; } = string.Empty;
-        public string DisplayName { get; set; } = string.Empty;
+        public string DisplayName { 
+            get {
+                if (!string.IsNullOrEmpty(FirstName) || !string.IsNullOrEmpty(LastName))
+                {
+                    return $"{FirstName} {LastName}".Trim();
+                }
+                return Email ?? Username;
+            }  
+        }
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
@@ -23,5 +31,6 @@ namespace AZ.Core.DTOs
 
         // Relationship
         public string Avatar { set; get; }
+        public string Thumbnail { set; get; }
     }
 }

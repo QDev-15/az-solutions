@@ -10,7 +10,7 @@ namespace AZ.Core.DTOs
     {
         public string AccessToken { get; set; }
         public string RefreshToken { get; set; }
-        public DateTime AccessTokenExpiry { get; set; }
-        public UserDto User { get; set; }
+        public DateTime ExpiryTime { get; set; }
+        public UserResponse User { get; set; }
     }
 }
