@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AZ.Core
+namespace AZ.Infrastructure.Repositories
 {
-    class Mapping
+    internal class UserRepository
     {
     }
 }
