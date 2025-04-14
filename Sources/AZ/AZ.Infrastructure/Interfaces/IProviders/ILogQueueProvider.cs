@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AZ.Infrastructure.Interfaces.Providers
+namespace AZ.Infrastructure.Interfaces.IProviders
 {
     public interface ILogQueueProvider
     {

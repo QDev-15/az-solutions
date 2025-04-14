@@ -1,5 +1,5 @@
 ﻿using AZ.Core.DTOs;
-using AZ.Infrastructure.Interfaces.Providers;
+using AZ.Infrastructure.Interfaces.IProviders;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;

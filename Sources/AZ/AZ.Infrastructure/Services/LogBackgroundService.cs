@@ -1,5 +1,5 @@
 ﻿using AZ.Infrastructure.Interfaces.IRepositories;
-using AZ.Infrastructure.Interfaces.Providers;
+using AZ.Infrastructure.Interfaces.IProviders;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;

@@ -4,9 +4,8 @@ using AZ.Infrastructure.DataAccess;
 using AZ.Infrastructure.Entities;
 using AZ.Infrastructure.Interfaces.IRepositories;
 using AZ.Infrastructure.Interfaces.IServices;
-using AZ.Infrastructure.Interfaces.Providers;
+using AZ.Infrastructure.Interfaces.IProviders;
 using AZ.Infrastructure.Providers;
-using AZ.Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AZ.Infrastructure.Extentions;
 
 namespace AZ.Infrastructure.Repositories
 {
@@ -27,7 +27,7 @@ namespace AZ.Infrastructure.Repositories
         private readonly ILogQueueProvider _logs;
 
         public AuthRepository(AZDbContext context, ITokenService tokenService, IPasswordHasher<User> passwordHasher,
-            AppSettingsJwt appSettingsJwt, MappingProvider mappingProvider, ILogQueueProvider logs)
+            AppSettingsJwt appSettingsJwt, IMappingProvider mappingProvider, ILogQueueProvider logs)
         {
             _context = context;
             _tokenService = tokenService;
@@ -41,7 +41,8 @@ namespace AZ.Infrastructure.Repositories
         {
             try
             {
-                var user = await _context.Users
+                var user = await _context.Users.Include(i => i.UserRoles).ThenInclude(r => r.Role)
+                    .Include(i => i.Avatar)
                     .FirstOrDefaultAsync(u => u.Username == request.UsernameOrEmail || u.Email == request.UsernameOrEmail);
 
                 if (user == null ||

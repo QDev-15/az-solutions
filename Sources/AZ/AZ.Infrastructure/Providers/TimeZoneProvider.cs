@@ -1,4 +1,4 @@
-﻿using AZ.Infrastructure.Interfaces.Providers;
+﻿using AZ.Infrastructure.Interfaces.IProviders;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;

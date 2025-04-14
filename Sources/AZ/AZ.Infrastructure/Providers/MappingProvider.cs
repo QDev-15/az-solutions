@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AZ.Infrastructure.Interfaces.Providers;
+using AZ.Infrastructure.Interfaces.IProviders;
 
 namespace AZ.Infrastructure.Providers
 {

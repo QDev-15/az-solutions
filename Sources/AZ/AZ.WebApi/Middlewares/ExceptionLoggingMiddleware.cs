@@ -1,7 +1,7 @@
 ﻿using AZ.Infrastructure.Interfaces;
 using AZ.Infrastructure.Interfaces.IRepositories;
-using AZ.Infrastructure.Interfaces.Providers;
-using AZ.Infrastructure.Services;
+using AZ.Infrastructure.Interfaces.IProviders;
+using AZ.Infrastructure.Extentions;
 
 namespace AZ.WebApi.Middlewares
 {

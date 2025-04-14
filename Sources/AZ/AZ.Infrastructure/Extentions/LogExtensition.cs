@@ -1,15 +1,10 @@
 ﻿using AZ.Core.DTOs;
-using AZ.Infrastructure.Interfaces.Providers;
+using AZ.Infrastructure.Interfaces.IProviders;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AZ.Infrastructure.Services
+namespace AZ.Infrastructure.Extentions
 {
-    public static class LogService
+    public static class LogExtensition
     {
         public static void LogError(this ILogQueueProvider queue, string message, string? source = null, string? stackTrace = null)
         {
