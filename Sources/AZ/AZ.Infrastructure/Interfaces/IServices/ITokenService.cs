@@ -10,7 +10,7 @@ namespace AZ.Infrastructure.Interfaces.IServices
 {
     public interface ITokenService
     {
-        string GenerateAccessToken(User user);
+        string GenerateAccessToken(User user, string jti);
         string GenerateRefreshToken();
         ClaimsPrincipal? GetPrincipalFromExpiredToken(string token);
     }

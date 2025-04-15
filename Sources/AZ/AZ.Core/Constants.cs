@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace AZ.Core
 {
-    internal class Constants
+    public static class Constants
     {
+        public class Message
+        {
+            public const string UserNotFound = "User not found!";
+        }
     }
 }

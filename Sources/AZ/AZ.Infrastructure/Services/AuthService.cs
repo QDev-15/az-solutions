@@ -14,46 +14,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AZ.Infrastructure.Extentions;
+using Microsoft.AspNetCore.Http;
+using Azure.Core;
 
-namespace AZ.Infrastructure.Repositories
+namespace AZ.Infrastructure.Services
 {
-    public class AuthRepository : IAuthRepository
+    public class AuthService : IAuthService
     {
-        private readonly AZDbContext _context;
         private readonly ITokenService _tokenService;
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly AppSettingsJwt _appSettingJwt;
         private readonly IMappingProvider _mappingProvider;
         private readonly ILogQueueProvider _logs;
+        private readonly IUserRepository _userRepository;
+        private readonly IRoleRepository _roleRepository;
+        private readonly IUserSessionRepository _userSessionRepository;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public AuthRepository(AZDbContext context, ITokenService tokenService, IPasswordHasher<User> passwordHasher,
-            AppSettingsJwt appSettingsJwt, IMappingProvider mappingProvider, ILogQueueProvider logs)
+        public AuthService(IUserRepository userRepository, ITokenService tokenService, IPasswordHasher<User> passwordHasher, IHttpContextAccessor httpContextAccessor,
+            AppSettingsJwt appSettingsJwt, IMappingProvider mappingProvider, ILogQueueProvider logs, IUserSessionRepository userSessionRepository,
+            IRoleRepository roleRepository)
         {
-            _context = context;
             _tokenService = tokenService;
             _passwordHasher = passwordHasher;
             _appSettingJwt = appSettingsJwt;
             _mappingProvider = mappingProvider;
             _logs = logs;
+            _roleRepository = roleRepository;
+            _userRepository = userRepository;
+            _userSessionRepository = userSessionRepository;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<AuthResponse> LoginAsync(LoginRequest request, string ipAddress, string userAgent, string timezone)
         {
             try
             {
-                var user = await _context.Users.Include(i => i.UserRoles).ThenInclude(r => r.Role)
-                    .Include(i => i.Avatar)
-                    .FirstOrDefaultAsync(u => u.Username == request.UsernameOrEmail || u.Email == request.UsernameOrEmail);
-
+                var user = await _userRepository.GetByUserNameAsync(request.UsernameOrEmail);
                 if (user == null ||
                     _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, request.Password) != PasswordVerificationResult.Success)
                 {
                     throw new UnauthorizedAccessException("Invalid credentials.");
                 }
-
-                var accessToken = _tokenService.GenerateAccessToken(user);
+                var jti = Guid.NewGuid().ToString();
+                var accessToken = _tokenService.GenerateAccessToken(user, jti);
                 var refreshToken = _tokenService.GenerateRefreshToken();
-
+                var userContext = _httpContextAccessor.HttpContext?.User;
+                
                 var session = new UserSession
                 {
                     UserId = user.Id,
@@ -63,18 +70,19 @@ namespace AZ.Infrastructure.Repositories
                     CreatedAt = DateTime.UtcNow,
                     IpAddress = ipAddress,
                     UserAgent = userAgent,
-                    TimeZone = timezone
+                    TimeZone = timezone,
+                    Jti = jti
                 };
 
-                _context.UserSessions.Add(session);
-                await _context.SaveChangesAsync();
+                await _userSessionRepository.AddAsync(session);
+                await _userSessionRepository.SaveChangesAsync();
 
                 return new AuthResponse
                 {
                     AccessToken = accessToken,
                     RefreshToken = refreshToken,
                     ExpiryTime = DateTime.UtcNow.AddMinutes(_appSettingJwt.AccessTokenExpirationMinutes),
-                    User = _mappingProvider.ReturnModel(user)
+                    User = _mappingProvider.ReturnUserModel(user)
                 };
             } catch(Exception ex)
             {
@@ -87,20 +95,19 @@ namespace AZ.Infrastructure.Repositories
             }
         }
 
-        public async Task<bool> RefreshTokenAsync(string refreshToken)
+        public async Task<AuthResponse> RefreshTokenAsync(string refreshToken)
         {
             try
             {
-                var session = await _context.UserSessions
-                    .Include(s => s.User)
-                    .FirstOrDefaultAsync(s => s.RefreshToken == refreshToken && s.IsActive);
+                var session = await _userSessionRepository.GetByRefreshToken(refreshToken);
 
-                if (session == null || session.RefreshTokenExpiry <= DateTime.UtcNow)
+                if (session == null || !session.IsActive)
                     throw new UnauthorizedAccessException("Invalid or expired refresh token.");
 
-                var newAccessToken = _tokenService.GenerateAccessToken(session.User);
+                var jti = Guid.NewGuid().ToString();
+                var newAccessToken = _tokenService.GenerateAccessToken(session.User, jti);
                 var newRefreshToken = _tokenService.GenerateRefreshToken();
-
+                var userContext = _httpContextAccessor.HttpContext?.User;
                 // Revoke old session
                 session.RevokedAt = DateTime.UtcNow;
 
@@ -112,16 +119,23 @@ namespace AZ.Infrastructure.Repositories
                     RefreshTokenExpiry = DateTime.UtcNow.AddDays(_appSettingJwt.RefreshTokenExpirationDays),
                     CreatedAt = DateTime.UtcNow,
                     IpAddress = session.IpAddress,
-                    UserAgent = session.UserAgent
+                    UserAgent = session.UserAgent,
+                    TimeZone = session.TimeZone,
+                    Jti = jti
                 };
 
-                _context.UserSessions.Add(newSession);
-                await _context.SaveChangesAsync();
-                return true;
+                await _userSessionRepository.AddAsync(newSession);
+                await _userSessionRepository.SaveChangesAsync();
+                return new AuthResponse
+                {
+                    AccessToken = newAccessToken,
+                    RefreshToken = newRefreshToken
+                };
             }
             catch (Exception ex)
             {
-                return false;
+                _logs.LogError(ex.Message);
+                return null;
             }
             
 
@@ -131,11 +145,11 @@ namespace AZ.Infrastructure.Repositories
         {
             try
             {
-                var session = await _context.UserSessions.FirstOrDefaultAsync(s => s.RefreshToken == refreshToken);
+                var session = await _userSessionRepository.GetByRefreshToken(refreshToken);
                 if (session != null)
                 {
                     session.RevokedAt = DateTime.UtcNow;
-                    await _context.SaveChangesAsync();
+                    await _userSessionRepository.SaveChangesAsync();
                 }
                 return true;
             } catch(Exception ex)
@@ -147,10 +161,11 @@ namespace AZ.Infrastructure.Repositories
 
         public async Task<bool> RegisterAsync(RegisterRequest request)
         {
-            if (await _context.Users.AnyAsync(u => u.Username == request.Username || u.Email == request.Email))
+            var user = await _userRepository.GetByUserNameAsync(request.Username);
+            if (user != null)
                 throw new Exception("Username or Email already exists.");
 
-            var user = new User
+            var newUser = new User
             {
                 Username = request.Username,
                 Email = request.Email,
@@ -161,17 +176,17 @@ namespace AZ.Infrastructure.Repositories
                 Status = UserStatus.Active
             };
 
-            user.PasswordHash = _passwordHasher.HashPassword(user, request.Password);
-            _context.Users.Add(user);
+            newUser.PasswordHash = _passwordHasher.HashPassword(newUser, request.Password);
+
 
             // Optionally assign default role
-            var defaultRole = await _context.Roles.FirstOrDefaultAsync(r => r.RoleType == "User");
+            var defaultRole = await _roleRepository.GetByTypeAsync("User");
             if (defaultRole != null)
             {
-                _context.UserRoles.Add(new UserRole { User = user, Role = defaultRole });
+                newUser.UserRoles.Add(new UserRole { User = newUser, Role = defaultRole });
             }
-
-            await _context.SaveChangesAsync();
+            await _userRepository.AddAsync(newUser);
+            await _userRepository.SaveChangesAsync();
             return true;
         }
     }

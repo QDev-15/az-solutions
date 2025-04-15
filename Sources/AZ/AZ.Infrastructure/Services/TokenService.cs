@@ -25,18 +25,18 @@ namespace AZ.Infrastructure.Services
             _appSettingJwt = appSettingJwt;
         }
 
-        public string GenerateAccessToken(User user)
+        public string GenerateAccessToken(User user, string jti)
         {
             var authClaims = new List<Claim>
-        {
-            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new Claim(ClaimTypes.Name, user.Username),
-            new Claim(ClaimTypes.Role, user.UserRoles?.FirstOrDefault()!.Role.Name),
-            new Claim(ClaimTypes.GivenName, user.FirstName + " " + user.LastName),
-            new Claim(ClaimTypes.Email, user.Email),
-            new Claim("avatar", user.Avatar?.FilePath??""),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-        };
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Role, user.UserRoles?.FirstOrDefault()!.Role.Name),
+                new Claim(ClaimTypes.GivenName, user.FirstName + " " + user.LastName),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim("avatar", user.Avatar?.FilePath??""),
+                new Claim(JwtRegisteredClaimNames.Jti, jti),
+            };
 
             var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettingJwt.Key!));
 

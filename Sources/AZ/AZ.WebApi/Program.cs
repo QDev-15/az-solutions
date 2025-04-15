@@ -10,6 +10,12 @@ using AZ.Infrastructure;
 using AZ.Infrastructure.Interfaces.IServices;
 using Microsoft.AspNetCore.Identity;
 using AZ.Infrastructure.Entities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System.Text.Json;
+using Microsoft.OpenApi.Models;
+using System.IdentityModel.Tokens.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,23 +56,107 @@ builder.Services.AddScoped<ITimeZoneProvider, TimeZoneProvider>();
 builder.Services.AddScoped<IMappingProvider, MappingProvider>();
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<IUserSessionRepository, UserSessionRepository>();
 
 // log services
 builder.Services.AddSingleton<ILogQueueProvider, LogQueueProvider>();
 builder.Services.AddScoped<ILogRepository, LogRepository>();
 
+// Services
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 // background services
 builder.Services.AddHostedService<LogBackgroundService>();
 
+builder.Services.AddHttpContextAccessor();
+// Authentication
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+
+        ValidIssuer = appSettingJwt.Issuer,
+        ValidAudience = appSettingJwt.Audience,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettingJwt.Key)),
+        ClockSkew = TimeSpan.Zero
+    };
+    // Thêm sự kiện kiểm tra trong DB sau khi token được giải mã
+    options.Events = new JwtBearerEvents
+    {
+        OnTokenValidated = async context =>
+        {
+            var userSessionRepo = context.HttpContext.RequestServices.GetRequiredService<IUserSessionRepository>();
+            
+            var jti = context.Principal?.FindFirst(JwtRegisteredClaimNames.Jti)?.Value;
+            if (string.IsNullOrEmpty(jti) || userSessionRepo == null)
+            {
+                context.Fail("Token không hợp lệ.");
+                return;
+            }
+
+            var session = await userSessionRepo.GetByJtiAsync(jti);
+            if (session == null || !session.IsActive)
+            {
+                context.Fail("Token đã bị thu hồi hoặc không còn hợp lệ.");
+            }
+        }
+    };
+});
 
 
-
-
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+        options.JsonSerializerOptions.WriteIndented = true; // Đẹp hơn để debug
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "AZ API", Version = "v1" });
+
+    // ✅ Add JWT Auth to Swagger
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = @"Nhập token dạng: Bearer {your JWT token}",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                },
+                Scheme = "oauth2",
+                Name = "Bearer",
+                In = ParameterLocation.Header,
+            },
+            new List<string>()
+        }
+    });
+});
 
 var app = builder.Build();
 

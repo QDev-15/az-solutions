@@ -23,6 +23,7 @@ namespace AZ.Infrastructure.Entities
         public string? IpAddress { get; set; }
         public string? UserAgent { get; set; }
         public string? TimeZone { get; set; }
+        public string? Jti { get; set; }
         public bool IsActive => RevokedAt == null && RefreshTokenExpiry > DateTime.UtcNow;
     }
 

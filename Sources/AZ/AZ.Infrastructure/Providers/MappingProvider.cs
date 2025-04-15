@@ -19,7 +19,7 @@ namespace AZ.Infrastructure.Providers
             _timeZoneProvider = timeZoneProvider;
         }
 
-        public UserResponse ReturnModel(User user)
+        public UserResponse ReturnUserModel(User user)
         {
             if (user == null) return new UserResponse();
             var uresponse = new UserResponse()

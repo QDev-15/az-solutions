@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AZ.Infrastructure.Interfaces.IRepositories
+namespace AZ.Infrastructure.Interfaces.IServices
 {
-    public interface IAuthRepository
+    public interface IAuthService
     {
         Task<AuthResponse> LoginAsync(LoginRequest request, string ipAddress, string userAgent, string timezone);
         Task<bool> RegisterAsync(RegisterRequest request);
-        Task<bool> RefreshTokenAsync(string refreshToken);
+        Task<AuthResponse> RefreshTokenAsync(string refreshToken);
         Task<bool> LogoutAsync(string currentRefreshToken);
     }
 }

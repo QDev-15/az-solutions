@@ -12,6 +12,6 @@ namespace AZ.Infrastructure.Interfaces.IProviders
     {
         DateTime ToLocal(DateTime time);
         DateTime ToUTC(DateTime time);
-        UserResponse ReturnModel(User user);
+        UserResponse ReturnUserModel(User user);
     }
 }

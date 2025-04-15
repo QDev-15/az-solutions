@@ -2,6 +2,11 @@
 using AZ.Infrastructure.Interfaces.IRepositories;
 using AZ.Infrastructure.Interfaces.IProviders;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using AZ.Infrastructure.Interfaces.IServices;
+using AZ.Core.DTOs.Results;
+using AZ.Core;
 
 namespace AZ.WebApi.Controllers
 {
@@ -9,13 +14,15 @@ namespace AZ.WebApi.Controllers
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
-        private readonly IAuthRepository _authRepo;
+        private readonly IAuthService _authRepo;
         private readonly ITimeZoneProvider _timezoneProvider;
+        private readonly IUserService _userService;
 
-        public AuthController(IAuthRepository authRepo, ITimeZoneProvider timezoneProvider)
+        public AuthController(IAuthService authRepo, ITimeZoneProvider timezoneProvider, IUserService userService)
         {
             _authRepo = authRepo;
             _timezoneProvider = timezoneProvider;
+            _userService = userService;
         }
 
         [HttpPost("register")]
@@ -37,7 +44,7 @@ namespace AZ.WebApi.Controllers
             var response = await _authRepo.LoginAsync(request, ipAddress, userAgent, timezone);
 
             if (response == null) return Unauthorized("Sai thông tin đăng nhập.");
-            return Ok(response);
+            return Ok(new ResultSuccessfull(response));
         }
 
         [HttpPost("refresh-token")]
@@ -56,6 +63,25 @@ namespace AZ.WebApi.Controllers
             if (!result) return BadRequest("Không thể đăng xuất.");
 
             return Ok("Đăng xuất thành công.");
+        }
+        [Authorize]
+        [HttpGet("me")]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            try
+            {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                int id = 0;
+                if (string.IsNullOrEmpty(userId) || !Int32.TryParse(userId, out id))
+                {
+                    return NotFound(new ResultError(Constants.Message.UserNotFound));
+                }    
+                var user = await _userService.GetById(id);
+                return Ok(new ResultSuccessfull(user));
+            } catch(Exception ex)
+            {
+                return NotFound(new ResultError(ex.Message));
+            }
         }
     }
 
