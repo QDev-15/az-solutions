@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AZ.Infrastructure.Interfaces.IRepositories
 {
-    public interface IUserSessionRepository : IRoleRepository<UserSession>
+    public interface IUserSessionRepository : IRepository<UserSession>
     {
         Task<UserSession> GetByRefreshToken(string refreshToken);
         Task<UserSession> GetByJtiAsync(string jti);

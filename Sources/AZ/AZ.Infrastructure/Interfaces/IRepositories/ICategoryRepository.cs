@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace AZ.Infrastructure.Interfaces.IRepositories
 {
-    public interface IRoleRepository : IRepository<Role>
+    public interface ICategoryRepository : IRepository<Category>
     {
-        Task<Role> GetByTypeAsync(string roleType);
+
     }
 }

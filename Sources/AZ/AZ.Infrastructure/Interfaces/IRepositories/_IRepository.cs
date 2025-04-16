@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace AZ.Infrastructure.Interfaces.IRepositories
 {
-    public interface IRoleRepository<T> where T : class
+    public interface IRepository<T> where T : class
     {
+        Task<ICollection<T>> GetAllAsync();
+        Task<T> GetById(int id);
         Task AddAsync(T entity);
         Task AddRangeAsync(IEnumerable<T> entities);
         void Update(T entity);

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AZ.Infrastructure.Interfaces.IRepositories
 {
-    public interface IUserRepository : IRoleRepository<User>
+    public interface IUserRepository : IRepository<User>
     {
         Task<User> GetByIdAsync(int id);
         Task<User> GetByUserNameAsync(string userName);

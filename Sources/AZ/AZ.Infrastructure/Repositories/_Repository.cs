@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AZ.Infrastructure.Repositories
 {
-    public class Repository<T> : IRoleRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
         public readonly AZDbContext _context;
         private readonly DbSet<T> _dbSet;
@@ -51,6 +51,16 @@ namespace AZ.Infrastructure.Repositories
         public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<ICollection<T>> GetAllAsync()
+        {
+            return await _dbSet.ToListAsync();
+        }
+
+        public async Task<T> GetById(int id)
+        {
+            return await _dbSet.FindAsync(id);
         }
     }
 }
