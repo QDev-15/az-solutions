@@ -11,18 +11,60 @@ using AZ.Core.DTOs.Roles;
 using AZ.Core.DTOs.Articles;
 using AZ.Core.DTOs.Languges;
 using AZ.Core.DTOs.Medias;
+using AZ.Core.DTOs.Categories;
+using AZ.Infrastructure.Interfaces.IRepositories;
+using AZ.Infrastructure.Extentions;
 
 namespace AZ.Infrastructure.Providers
 {
     public class MappingProvider : IMappingProvider
     {
         private readonly ITimeZoneProvider _timeZoneProvider;
+        private readonly ILanguageRepository _languageRepository;
+        private readonly ILogQueueProvider _logQueueProvider;
+        private string languageCode = "vi";
 
-        public MappingProvider(ITimeZoneProvider timeZoneProvider)
+        public MappingProvider(ITimeZoneProvider timeZoneProvider,
+            ILanguageRepository languageRepository,
+            ILogQueueProvider logQueueProvider)
         {
+            _languageRepository = languageRepository;
             _timeZoneProvider = timeZoneProvider;
+            languageCode = _timeZoneProvider.GetLanguageCode();
+            _logQueueProvider = logQueueProvider;
         }
 
+        private async Task<string> GetLanguage()
+        {
+            return await _languageRepository.GetLanguageCodeDefault();
+        }
+        public DateTime ToLocal(DateTime time)
+        {
+
+            try
+            {
+                var timeZone = Helper.GetTimeZone(_timeZoneProvider.GetTimeZoneId());
+                return DateTimeHelper.ConvertUtcToLocal(time, timeZone);
+            } catch (Exception ex)
+            {
+                _logQueueProvider.LogError(ex.Message, ex.Source, ex.StackTrace);
+                return DateTimeHelper.ConvertUtcToLocal(time, DateTimeHelper.defaultZone);
+            }            
+        }
+
+        public DateTime ToUTC(DateTime time)
+        {
+            try
+            {
+                var timeZone = Helper.GetTimeZone(_timeZoneProvider.GetTimeZoneId());
+                return DateTimeHelper.ConvertLocalToUtc(time, timeZone);
+            }
+            catch (Exception ex)
+            {
+                _logQueueProvider.LogError(ex.Message, ex.Source, ex.StackTrace);
+                return DateTimeHelper.ConvertLocalToUtc(time, DateTimeHelper.defaultZone);
+            }
+        }
         public DTO_Language ReturnLanguageModel(Language lan)
         {
             if (lan == null) return null;
@@ -52,6 +94,7 @@ namespace AZ.Infrastructure.Providers
             return dtoMedia;
         }
 
+        // users
         public UserResponse ReturnUserModel(User user)
         {
             if (user == null) return new UserResponse();
@@ -67,7 +110,8 @@ namespace AZ.Infrastructure.Providers
                 PhoneNumber = user.PhoneNumber,
                 Status = user.Status.ToString(),
                 CreatedAt = ToLocal(user.CreatedAt),
-                UpdatedAt = ToLocal(user.UpdatedAt)
+                UpdatedAt = ToLocal(user.UpdatedAt),
+                UserRoles= user.UserRoles.Select(x => ReturnUserRoleModel(x)).ToList()
             };
             return uresponse;
         }
@@ -93,12 +137,23 @@ namespace AZ.Infrastructure.Providers
             var dtoUserRole = new DTO_UserRole()
             {
                 Id = userRole.Id,
-                Role = ReturnRoleModel(userRole.Role),
-                User = ReturnUserModel(userRole.User)
+                Role = new DTO_Role() { 
+                    Id = userRole.Role.Id,
+                    Name = userRole.Role.Name,
+                    RoleType = userRole.Role.RoleType,
+                    Description = userRole.Role.Description
+                },
+                User = new UserResponse()
+                {
+                    Id = userRole.User.Id,
+                    Username = userRole.User.Username,
+                    Email = userRole.User.Email
+                }
             };
             return dtoUserRole;
         }
 
+        // Articles
         public DTO_Tag ReturnTagModel(Tag tag)
         {
             if (tag == null) return null;
@@ -141,11 +196,21 @@ namespace AZ.Infrastructure.Providers
             {
                 Id = articleTranslation.Id,
                 Content = articleTranslation.Content,
-                Language = ReturnLanguageModel(articleTranslation.Language),
+                Language = new DTO_Language()
+                {
+                    Code = articleTranslation.Language.Code,
+                    DisplayName = articleTranslation.Language.DisplayName
+                },
                 MetaDescription = articleTranslation.MetaDescription,
                 MetaKeywords = articleTranslation.MetaKeywords,
                 MetaTitle = articleTranslation.MetaTitle,
-                OgImage = ReturnMediaModel(articleTranslation.OgImage),
+                OgImage = new DTO_Media()
+                {
+                    Id = articleTranslation.OgImage.Id,
+                    AltText = articleTranslation.OgImage.AltText,
+                    FilePath = articleTranslation.OgImage.FilePath,
+                    Thumbnail = articleTranslation.OgImage.Thumbnail
+                },
                 Slug = articleTranslation.Slug,
                 Title = articleTranslation.Title
             };
@@ -160,25 +225,46 @@ namespace AZ.Infrastructure.Providers
                 Id = article.Id,
                 Alias = article.Alias,
                 Thumbnail = ReturnMediaModel(article.Thumbnail),
+                IsOriginal = article.IsOriginal,
+                Source = article.Source,
                 RatingResult = article.RatingResult,
+                Views = article.Views,
+                Description = article.Description,
+                CreatedAt = ToLocal(article.CreatedAt),
+                UpdatedAt = ToLocal(article.UpdatedAt),
+                PublishedAt = ToLocal(article.PublishedAt),
                 Ratings = article.Ratings.Any() ? new List<DTO_Rating>() : article.Ratings.Select(x => ReturnRatingModel(x)).ToList(),
                 ArticleTranslations = article.ArticleTranslations.Any() 
                     ? new List<DTO_ArticleTranslation>() 
                     : article.ArticleTranslations.Select(x => ReturnArticleTranslation(x)).ToList(),
                 Author = ReturnUserModel(article.Author),
-                Category = 
+                Category = new DTO_Category()
+                {
+                    Id = article.Category.Id,
+                },
+                Tags = article.Tags.Select(x => ReturnTagModel(x)).ToList(),
+                Likes = article.Likes.Select(x => ReturnLikeModel(x)).ToList(),
+                Status = article.Status,
+                Title = article.Title
+                
             };
+            return dtoArticle;
         }
 
-
-        public DateTime ToLocal(DateTime time)
+        // categories
+        public DTO_Category ReturnCategoryModel(Category category)
         {
-            return DateTimeHelper.ConvertUtcToLocal(time, _timeZoneProvider.GetTimeZoneId());
+            throw new NotImplementedException();
         }
 
-        public DateTime ToUTC(DateTime time)
+        public DTO_CategoryPermission ReturnCategoryPermission(CategoryPermission categoryPermission)
         {
-            return DateTimeHelper.ConvertLocalToUtc(time, _timeZoneProvider.GetTimeZoneId());
+            throw new NotImplementedException();
+        }
+
+        public DTO_CategoryTranslation ReturnCategoryTranslation(CategoryTranslation categoryTranslation)
+        {
+            throw new NotImplementedException();
         }
     }
 }

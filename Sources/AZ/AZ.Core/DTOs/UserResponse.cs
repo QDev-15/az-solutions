@@ -1,4 +1,5 @@
-﻿using AZ.Core.Enums;
+﻿using AZ.Core.DTOs.Roles;
+using AZ.Core.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,5 +33,6 @@ namespace AZ.Core.DTOs
         // Relationship
         public string Avatar { set; get; }
         public string Thumbnail { set; get; }
+        public List<DTO_UserRole> UserRoles { set; get; } = new List<DTO_UserRole>();
     }
 }

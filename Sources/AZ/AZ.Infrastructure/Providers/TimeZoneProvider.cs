@@ -22,5 +22,11 @@ namespace AZ.Infrastructure.Providers
             var headerValue = _httpContextAccessor.HttpContext?.Request?.Headers["TimeZone"].ToString();
             return string.IsNullOrWhiteSpace(headerValue) ? "SE Asia Standard Time" : headerValue;
         }
+
+        public string GetLanguageCode()
+        {
+            var headerValue = _httpContextAccessor.HttpContext?.Request?.Headers["lang"].ToString();
+            return string.IsNullOrWhiteSpace(headerValue) ? "vi" : headerValue;
+        }
     }
 }

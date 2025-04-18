@@ -16,4 +16,8 @@
     <None Remove="Helpers\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="TimeZoneConverter" Version="7.0.0" />
+  </ItemGroup>
+
 </Project>

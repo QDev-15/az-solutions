@@ -59,6 +59,7 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IUserSessionRepository, UserSessionRepository>();
+builder.Services.AddScoped<ILanguageRepository, LanguageRepository>();
 
 // log services
 builder.Services.AddSingleton<ILogQueueProvider, LogQueueProvider>();

@@ -11,12 +11,11 @@ namespace AZ.Core.DTOs.Categories
     public class DTO_Category
     {
         public int Id { get; set; }
-        public int? ParentId { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
         // Relationships
-        public DTO_Category ParentCategory { get; set; }
+        public DTO_Category? ParentCategory { get; set; }
 
         public List<DTO_Category> SubCategories { get; set; } = new List<DTO_Category>();
         public List<DTO_Article> Articles { get; set; } = new List<DTO_Article>();

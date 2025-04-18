@@ -25,12 +25,12 @@ namespace AZ.Core.DTOs.Articles
         public float RatingResult { set; get; } //caculator rating
 
         // Relationships
-        public DTO_Category Category { get; set; }
-        public UserResponse Author { get; set; }
-        public DTO_Media Thumbnail { get; set; }
-        public ICollection<DTO_Like> Likes { get; set; }
-        public ICollection<DTO_Rating> Ratings { get; set; }
-        public ICollection<DTO_Tag> Tags { get; set; }
-        public ICollection<DTO_ArticleTranslation> ArticleTranslations { get; set; }
+        public DTO_Category? Category { get; set; }
+        public UserResponse? Author { get; set; }
+        public DTO_Media? Thumbnail { get; set; }
+        public ICollection<DTO_Like> Likes { get; set; } = new List<DTO_Like>();
+        public ICollection<DTO_Rating> Ratings { get; set; } = new List<DTO_Rating>();
+        public ICollection<DTO_Tag> Tags { get; set; } = new List<DTO_Tag>();
+        public ICollection<DTO_ArticleTranslation> ArticleTranslations { get; set; } = new List<DTO_ArticleTranslation>();
     }
 }

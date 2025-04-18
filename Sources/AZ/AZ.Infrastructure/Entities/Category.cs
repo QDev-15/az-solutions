@@ -14,7 +14,7 @@ namespace AZ.Infrastructure.Entities
         public DateTime UpdatedAt { get; set; }
 
         // Relationships
-        public Category ParentCategory { get; set; }
+        public Category? ParentCategory { get; set; }
         public ICollection<Category> SubCategories { get; set; } = new List<Category>();
         public ICollection<Article> Articles { get; set; } = new List<Article>();
         public ICollection<CategoryPermission> CategoryPermissions { get; set; } = new List<CategoryPermission>();

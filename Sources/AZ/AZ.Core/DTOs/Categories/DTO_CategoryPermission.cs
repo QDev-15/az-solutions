@@ -13,8 +13,8 @@ namespace AZ.Core.DTOs.Categories
         public int Id { get; set; }
 
         // Relationships
-        public UserResponse User { get; set; }
-        public DTO_Category Category { get; set; }
-        public DTO_Role Role { get; set; }
+        public UserResponse? User { get; set; }
+        public DTO_Category? Category { get; set; }
+        public DTO_Role? Role { get; set; }
     }
 }

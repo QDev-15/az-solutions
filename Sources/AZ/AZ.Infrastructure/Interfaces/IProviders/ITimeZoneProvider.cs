@@ -9,5 +9,6 @@ namespace AZ.Infrastructure.Interfaces.IProviders
     public interface ITimeZoneProvider
     {
         string GetTimeZoneId();
+        string GetLanguageCode();
     }
 }
