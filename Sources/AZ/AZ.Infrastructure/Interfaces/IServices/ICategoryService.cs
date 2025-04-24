@@ -1,4 +1,5 @@
-﻿using AZ.Infrastructure.Entities;
+﻿using AZ.Core.DTOs.Categories;
+using AZ.Infrastructure.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace AZ.Infrastructure.Interfaces.IServices
 {
     public interface ICategoryService
     {
-        Task<IEnumerable<Category>> GetAllCategoriesAsync();
-        Task<Category?> GetCategoryByIdAsync(int id);
-        Task CreateCategoryAsync(Category category);
-        Task UpdateCategoryAsync(Category category);
+        Task<IEnumerable<DTO_Category>> GetAllCategoriesAsync();
+        Task<DTO_Category> GetCategoryByIdAsync(int id);
+        Task CreateCategoryAsync(DTO_Category category);
+        Task UpdateCategoryAsync(DTO_Category category);
         Task DeleteCategoryAsync(int id);
     }
 }

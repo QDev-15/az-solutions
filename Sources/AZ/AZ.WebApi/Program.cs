@@ -66,6 +66,7 @@ builder.Services.AddSingleton<ILogQueueProvider, LogQueueProvider>();
 builder.Services.AddScoped<ILogRepository, LogRepository>();
 
 // Services
+builder.Services.AddSingleton<ITranslationService, TranslationService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 // background services

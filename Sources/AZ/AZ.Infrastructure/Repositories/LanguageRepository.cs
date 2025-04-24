@@ -2,7 +2,6 @@
 using AZ.Infrastructure.Entities;
 using AZ.Infrastructure.Interfaces.IProviders;
 using AZ.Infrastructure.Interfaces.IRepositories;
-using AZ.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AZ.Infrastructure.Providers
+namespace AZ.Infrastructure.Repositories
 {
     public class LanguageRepository : Repository<Language>, ILanguageRepository
     {
@@ -28,7 +27,7 @@ namespace AZ.Infrastructure.Providers
         public async Task<Language> GetDefault()
         {
             var language = await _context.Languages.Where(x => x.IsEnabled).FirstOrDefaultAsync(x => x.IsDefault);
-            return language??(new Language() { Code = "vi" });
+            return language??new Language() { Code = "vi" };
         }
 
         public async Task<string> GetLanguageCodeDefault()
@@ -39,6 +38,12 @@ namespace AZ.Infrastructure.Providers
                 language = await GetDefault();
             }
             return language.Code;
+        }
+
+        public async Task<ICollection<string>> GetLanguageCodes()
+        {
+            var langs = await _context.Languages.Where(x => x.IsEnabled).Select(x => x.Code).ToListAsync();
+            return langs;
         }
     }
 }

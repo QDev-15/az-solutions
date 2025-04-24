@@ -18,6 +18,10 @@ namespace AZ.Infrastructure.Interfaces.IProviders
         DateTime ToLocal(DateTime time);
         DateTime ToUTC(DateTime time);
 
+        Task<string> GetLanguageCode();
+        Task<ICollection<string>> GetLanguageCodes();
+        Task<Language> GetLanguage();
+
         // system
         DTO_Language ReturnLanguageModel(Language lan);
         DTO_Media ReturnMediaModel(Media media);

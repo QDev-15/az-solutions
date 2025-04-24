@@ -14,6 +14,17 @@ namespace AZ.Infrastructure.DataAccess.Configurations
             // Khóa chính
             builder.HasKey(c => c.Id);
 
+            builder.Property(ct => ct.Name)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            builder.Property(ct => ct.Description)
+                .HasMaxLength(1000); // Mô tả có thể dài hơn
+
+            builder.Property(ct => ct.Slug)
+                .IsRequired()
+                .HasMaxLength(255);
+
             builder.Property(c => c.CreatedAt)
                 .IsRequired();
 

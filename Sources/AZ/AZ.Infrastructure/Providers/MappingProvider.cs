@@ -34,9 +34,17 @@ namespace AZ.Infrastructure.Providers
             _logQueueProvider = logQueueProvider;
         }
 
-        private async Task<string> GetLanguage()
+        public async Task<string> GetLanguageCode()
         {
             return await _languageRepository.GetLanguageCodeDefault();
+        }
+        public async Task<ICollection<string>> GetLanguageCodes()
+        {
+            return await _languageRepository.GetLanguageCodes();
+        }
+        public async Task<Language> GetLanguage()
+        {
+            return await _languageRepository.GetDefault();
         }
         public DateTime ToLocal(DateTime time)
         {
@@ -266,5 +274,7 @@ namespace AZ.Infrastructure.Providers
         {
             throw new NotImplementedException();
         }
+
+
     }
 }

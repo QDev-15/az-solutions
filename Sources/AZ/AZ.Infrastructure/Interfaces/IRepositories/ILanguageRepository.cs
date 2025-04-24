@@ -10,6 +10,7 @@ namespace AZ.Infrastructure.Interfaces.IRepositories
     public interface ILanguageRepository : IRepository<Language>
     {
         Task<string> GetLanguageCodeDefault();
+        Task<ICollection<string>> GetLanguageCodes();
         Task<Language> GetDefault();
         Task<Language> GetByCode(string code);
     }
